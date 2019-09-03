@@ -1,0 +1,8 @@
+<h1>Restaurants#index</h1>
+<% @restaurants.each do |res| %>
+<p><%=res.id %>.<%=res.name  %>, Address- <%=res.address%> - <%= link_to 'details', restaurant_path(res.id),class: "btn btn-success" %></p>
+
+<% end %>
+
+<%= link_to 'new', new_restaurant_path,class: "btn btn-primary" %>
+
